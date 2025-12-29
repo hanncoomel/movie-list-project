@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Wishlists - MovieList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="wishlist.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-left">
+            <div class="logo">MOVIELIST</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search movies...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="#" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <div class="main-container-wrapper">
+        <div class="main-container">
+            <aside class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="profile.html">PROFILE</a></li>
+                        <li><a href="about.html">ABOUT US</a></li>
+                        <li><a href="wishlist.html" class="active">YOUR WISHLIST</a></li>
+                        <li><a href="details.html">MOVIE DETAILS</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="wishlist-content">
+                <section class="wishlist-section">
+                    <h1 class="page-title">My Wishlists</h1>
+                    
+                    <div class="wishlist-tabs">
+                        <button class="tab-btn active" data-status="watched">Watched</button>
+                        <button class="tab-btn" data-status="completed">Completed</button>
+                        <button class="tab-btn" data-status="ongoing">On Going</button>
+                        <button class="tab-btn" data-status="dropped">Dropped</button>
+                        <button class="tab-btn" data-status="plan">Plan to Watched</button>
+                    </div>
+
+                    <!-- Movie List Container (For movie list, will be using JS)-->
+                    <div class="movie-list-container" id="movie-container">
+                    
+                    </div>
+                    <script src="wishlish.js"></script>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="logo footer-logo">MOVIELIST</div>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Top Rated</a></li>
+                <li><a href="#">Coming Soon</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Group 7. All rights reserved.</p>
+            <ul class="footer-legal">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

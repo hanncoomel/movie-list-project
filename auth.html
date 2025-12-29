@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - MovieList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">MOVIELIST</div>
+    </header>
+
+    <div class="main-container-wrapper">
+        <div class="profile-content"> <div class="profile-card">
+                <h1 id="auth-title">Sign In</h1>
+                
+                <form class="profile-form" id="auth-form">
+                    <div class="form-group float-label">
+                        <input type="text" id="auth-user" placeholder=" " required>
+                        <label>Username</label>
+                    </div>
+                    <div class="form-group float-label">
+                        <input type="password" id="auth-pass" placeholder=" " required>
+                        <label>Password</label>
+                    </div>
+                    
+                    <button type="submit" class="logout-btn" style="width: 100%; border: none; cursor: pointer; margin-top: 20px;">
+                        CONTINUE
+                    </button>
+                </form>
+
+                <p style="margin-top: 30px; color: var(--text-secondary);">
+                    <span id="toggle-text">New to MovieList?</span> 
+                    <a href="#" onclick="toggleAuth()" id="toggle-link" style="color: var(--spotlight-gold); font-weight: bold;">Sign Up now</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isLogin = true;
+        function toggleAuth() {
+            isLogin = !isLogin;
+            document.getElementById('auth-title').innerText = isLogin ? "Sign In" : "Sign Up";
+            document.getElementById('toggle-text').innerText = isLogin ? "New to MovieList?" : "Already have an account?";
+            document.getElementById('toggle-link').innerText = isLogin ? "Sign Up now" : "Sign In";
+        }
+
+        document.getElementById('auth-form').onsubmit = (e) => {
+            e.preventDefault();
+            window.location.href = "profile.html";
+        };
+    </script>
+</body>
+</html>

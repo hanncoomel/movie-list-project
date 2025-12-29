@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MovieList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-left">
+            <div class="logo">MOVIELIST</div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search movies...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="wishlist.html" class="wishlist-link"><i class="fas fa-star"></i> My Wishlists</a>
+            <a href="#" class="logout-btn">Logout</a>
+        </div>
+    </header>
+
+    <div class="main-container-wrapper">
+        <div class="main-container">
+            <aside class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="profile.html">PROFILE</a></li>
+                        <li><a href="about.html" class="active">ABOUT US</a></li>
+                        <li><a href="wishlist.html">YOUR WISHLIST</a></li>
+                        <li><a href="details.html">MOVIE DETAILS</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="about-content">
+                <section class="team-section">
+                    <p class="about-subtitle">About</p>
+                    <h1 class="about-title">Our Teams</h1>
+
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <div class="member-photo">
+                                <!--Update here to change photo(<img src='Image.JPG' alt=i class="fas fa-user-tie">)-->
+                                <i class="fas fa-user-tie"></i>
+                                </div>
+                            <h3>AIDIL</h3>
+                            <div class="member-bio">
+                                <p>Lead Developer & Movie Buff</p>
+                                <p>Ensuring the smoothest streaming experience for all users.</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="member-photo">
+                                <i class="fas fa-user-ninja"></i>
+                                </div>
+                            <h3>DAYANA</h3>
+                            <div class="member-bio">
+                                <p>UI/UX Designer</p>
+                                <p>Crafting the cinematic look and feel of your movie wishlist.</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="member-photo">
+                                <i class="fas fa-user-secret"></i>
+                                </div>
+                            <h3>HANI</h3>
+                            <div class="member-bio">
+                                <p>Database Architect</p>
+                                <p>Managing thousands of movie titles and your personal lists.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="logo footer-logo">MOVIELIST</div>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Top Rated</a></li>
+                <li><a href="#">Coming Soon</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Group 7. All rights reserved. Cut! Print it!</p>
+            <ul class="footer-legal">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+</html>

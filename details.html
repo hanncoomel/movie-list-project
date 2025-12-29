@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Movie Details - MovieList</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .details-container {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            padding: 60px 20px;
+            align-items: center;
+        }
+        .large-movie-card {
+            width: 100%;
+            max-width: 950px;
+            display: flex;
+            flex-direction: row;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 40px;
+            gap: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            scroll-margin-top: 100px;
+        }
+        .large-movie-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: #e50914;
+            transform: translateY(-5px);
+        }
+        .detail-poster {
+            width: 280px;
+            height: 400px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+        .movie-info h2 { font-size: 2.8rem; margin-bottom: 10px; color: #e50914; }
+        @media (max-width: 850px) { .large-movie-card { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body style="background-color: #0f0f0f; color: white;">
+
+    <header class="main-header">
+        <div class="header-left"><div class="logo">MOVIELIST</div></div>
+        <div class="header-right"><a href="profile.html" class="logout-btn">Back to Profile</a></div>
+    </header>
+
+    <main class="details-container">
+        <div class="large-movie-card" id="gumball">
+            <img src="Gumball.jpeg" class="detail-poster">
+            <div class="movie-info">
+                <h2>The Amazing World of Gumball</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 8.3 | Animation</p>
+                <p>The misadventures of a 12-year-old cat and his family in the weird town of Elmore.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('The Amazing World of Gumball')">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <div class="large-movie-card" id="darkknight">
+            <img src="darkknight.jpg" class="detail-poster">
+            <div class="movie-info">
+                <h2>The Dark Knight</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 9.0 | Action, Crime</p>
+                <p>When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('The Dark Knight')">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <div class="large-movie-card" id="inception">
+            <img src="inception.jpg" class="detail-poster">
+            <div class="movie-info">
+                <h2>Inception</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 8.8 | Sci-Fi, Thriller</p>
+                <p>A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('Inception')">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <div class="large-movie-card" id="interstellar">
+            <img src="interstellar.jpg" class="detail-poster">
+            <div class="movie-info">
+                <h2>Interstellar</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 8.7 | Adventure, Sci-Fi</p>
+                <p>A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('Interstellar')">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <div class="large-movie-card" id="spiderman">
+            <img src="spiderman.jpg" class="detail-poster">
+            <div class="movie-info">
+                <h2>Across the Spider-Verse</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 8.6 | Action, Animation</p>
+                <p>Miles Morales catapults across the Multiverse, where he encounters a team of Spider-People charged with protecting its very existence.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('Across the Spider-Verse')">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <div class="large-movie-card" id="theboys">
+            <img src="theboys.jpeg" class="detail-poster">
+            <div class="movie-info">
+                <h2>The Boys</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 8.7 | Action, Sci-Fi</p>
+                <p>Vigilantes set out to take down corrupt superheroes who abuse their powers.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('The Boys')">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <div class="large-movie-card" id="demonslayer">
+            <img src="demonsl.jpeg" class="detail-poster">
+            <div class="movie-info">
+                <h2>Demon Slayer</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 8.7 | Anime</p>
+                <p>A family is slaughtered by a demon and the only survivor, a sister, is turned into a demon herself.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('Demon Slayer')">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <div class="large-movie-card" id="bluey">
+            <img src="bluey.jpg" class="detail-poster">
+            <div class="movie-info">
+                <h2>Bluey</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 9.4 | Family</p>
+                <p>Follow the adventures of a Blue Heeler puppy living with her family.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('Bluey')">Add to Wishlist</button>
+            </div>
+        </div>
+
+        <div class="large-movie-card" id="senario">
+            <img src="senariolagi.jpeg" class="detail-poster">
+            <div class="movie-info">
+                <h2>Senario Lagi</h2>
+                <p style="color: #f39c12;"><i class="fas fa-star"></i> 7.5 | Comedy</p>
+                <p>A legendary Malaysian comedy following the hilarious journey of the Senario crew.</p>
+                <button class="edit-wishlist-btn" onclick="addToWishlist('Senario Lagi')">Add to Wishlist</button>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
